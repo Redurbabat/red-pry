@@ -62,7 +62,7 @@ struct HomeView: View {
 
                 Text(String(store.displayName.prefix(1)).uppercased())
                     .fontWeight(.bold)
-                    .foregroundStyle(.luminaPurple)
+                    .foregroundStyle(Color.luminaPurple)
             }
         }
     }
@@ -109,7 +109,7 @@ struct HomeView: View {
                         systemImage: "timer"
                     )
                     .font(.caption.weight(.medium))
-                    .foregroundStyle(.luminaPurple)
+                    .foregroundStyle(Color.luminaPurple)
                 }
             }
         }
