@@ -129,7 +129,7 @@ struct SettingsView: View {
                 VStack(spacing: 22) {
                     Image(systemName: "sparkles")
                         .font(.system(size: 55))
-                        .foregroundStyle(.luminaPurple)
+                        .foregroundStyle(Color.luminaPurple)
 
                     Text("Lumina")
                         .font(.largeTitle.bold())
