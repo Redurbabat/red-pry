@@ -1,7 +1,22 @@
-# Lumina iOS – red-pry
+# Lumina – Fokus & Routinen (iOS 17+)
 
-Native SwiftUI app with local focus sessions, daily routines, statistics and settings.
+A native SwiftUI iPhone application with onboarding, daily routines, focus timer, progress statistics and local UserDefaults persistence.
 
-This repository includes a GitHub Actions workflow that builds an unsigned iOS IPA for development/testing. **Unsigned IPAs must be signed before installing on an iPhone.**
+## Local build (macOS)
+Install Xcode 15+ and XcodeGen; then run:
 
-Build status: see **Actions → Build Lumina iOS IPA**.
+```sh
+brew install xcodegen
+xcodegen generate --spec project.yml
+open Lumina.xcodeproj
+```
+
+Bundle ID: `com.redurbabat.lumina`. Minimum iOS: 17.0.
+
+## GitHub Actions IPA
+Every push to `main` triggers `.github/workflows/build-ipa.yml`.
+Open **Actions > Build Lumina iOS IPA > latest run > Artifacts > Lumina-UNSIGNED-IPA** to download the unsigned IPA archive.
+
+**Important:** An unsigned IPA is *not directly installable* on a normal iPhone. It must be signed with a suitable certificate and provisioning profile (using Xcode or your signing workflow). No credentials or signing secrets are needed to produce the unsigned IPA.
+
+The build is made using XcodeGen to generate the native Xcode project. The source code is included in `Lumina/`.
