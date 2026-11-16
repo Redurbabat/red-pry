@@ -142,7 +142,7 @@ struct OnboardingView: View {
 
             Image(systemName: "person.crop.circle.badge.sparkles")
                 .font(.system(size: 70))
-                .foregroundStyle(.luminaPurple)
+                .foregroundStyle(Color.luminaPurple)
 
             VStack(spacing: 12) {
                 Text("Wie dürfen wir dich nennen?")
